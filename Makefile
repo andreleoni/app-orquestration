@@ -6,6 +6,9 @@ start:
 bash-backend:
 	docker exec -it app-backend /bin/bash
 
+bash-frontend:
+	docker exec -it app-frontend /bin/bash
+
 server-backend:
 	docker exec -it app-backend rails s -b 0.0.0.0 -p 3001
 
