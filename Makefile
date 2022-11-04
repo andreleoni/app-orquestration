@@ -16,6 +16,8 @@ server-frontend:
 	docker exec -it app-frontend npm start
 
 setup:
+	docker-compose up --build
+	docker exec -it app-backend rails db:drop
 	docker exec -it app-backend rails db:create
 	docker exec -it app-backend rails db:migrate
 	docker exec -it app-backend rails db:seed
