@@ -17,6 +17,9 @@ server-frontend:
 
 setup:
 	docker-compose up --build
+	make seed
+
+seed:
 	docker exec -it app-backend rails db:drop
 	docker exec -it app-backend rails db:create
 	docker exec -it app-backend rails db:migrate
