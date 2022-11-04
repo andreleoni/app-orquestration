@@ -14,7 +14,8 @@ function App() {
 
   return (
     <div className="App">
-      <p> Componentes  </p>
+      <h1> Componentes do Backend </h1>
+
       <div dangerouslySetInnerHTML={componentsInnerHTML} />
     </div>
   )

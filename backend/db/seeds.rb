@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Component.create!(title: "First component of backend")
+
+Component.create!(title: "Second component of backend")
+
+Component.create!(title: "Third component of backend")
