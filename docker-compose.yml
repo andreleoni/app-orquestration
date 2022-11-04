@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  backend:
+    container_name: app-backend
+    build: ./backend
+    command: /bin/bash
+    tty: true
+    volumes:
+      - ./backend:/backend
+    ports:
+      - "3001:3001"
+
+  frontend:
+    container_name: app-frontend
+    build: ./frontend
+    tty: true
+    command: /bin/bash
+    volumes:
+      - ./frontend:/frontend
+    ports:
+      - 3000:3000
