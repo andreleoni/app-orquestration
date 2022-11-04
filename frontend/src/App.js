@@ -2,7 +2,9 @@ import './App.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const COMPONENTS = axios.get(`http://localhost:3001/api/components`)
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+
+const COMPONENTS = axios.get(BACKEND_URL + `/api/components`)
 
 function App() {
   const [components, setComponent] = useState({ components: [] });

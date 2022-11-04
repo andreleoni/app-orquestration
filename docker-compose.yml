@@ -4,8 +4,10 @@ services:
   backend:
     container_name: app-backend
     build: ./backend
-    command: /bin/bash
     tty: true
+    command: /bin/bash
+    env_file:
+      - backend/.env
     volumes:
       - ./backend:/backend
     ports:
@@ -16,6 +18,8 @@ services:
     build: ./frontend
     tty: true
     command: /bin/bash
+    env_file:
+      - frontend/.env
     volumes:
       - ./frontend:/frontend
     ports:
