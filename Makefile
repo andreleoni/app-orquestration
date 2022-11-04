@@ -22,6 +22,3 @@ setup:
 
 stop:
 	docker-compose down
-
-fix-permission:
-	sudo chown $USER:$USER **/*

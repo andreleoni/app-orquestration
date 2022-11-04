@@ -31,3 +31,9 @@ Acessa o bash do container do backend:
 Acessa o bash do container do frontend:
 
 `make bash-frontend`
+
+# Problema com permissão de arquivos
+
+Caso você tenha problema com permissão de arquivos gerados pelo docker, pode ser resolvido com o comando:
+
+`sudo chown $USER:$USER -R .`
