@@ -1,5 +1,5 @@
 start:
-	docker-compose up -d
+	docker compose up -d
 	gnome-terminal --tab -- bash -ic "make server-backend"
 	gnome-terminal --tab -- bash -ic "make server-frontend"
 
@@ -16,7 +16,7 @@ server-frontend:
 	docker exec -it app-frontend npm start
 
 setup:
-	docker-compose up --build
+	docker compose up --build
 	make seed
 
 seed:
@@ -26,4 +26,4 @@ seed:
 	docker exec -it app-backend rails db:seed
 
 stop:
-	docker-compose down
+	docker compose down
